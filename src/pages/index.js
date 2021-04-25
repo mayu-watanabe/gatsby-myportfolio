@@ -65,19 +65,19 @@ const IndexPage = () => (
         </div>
       </div>
       <div className={Style.experience__skills}>
-        <div>
+        <div className={Style.experience__skills__element}>
           <p className={Style.experience__skills__title}>frontend</p>
           <div className={Style.experience__skills__line}></div>
           <p className={Style.experience__skills__text}>HTML, CSS/SCSS, Javascript</p>
           <p className={Style.experience__skills__subtitle}>FW/other</p>
           <p className={Style.experience__skills__text}>Vue.js, Nuxt.js, knockout.js, jQuery, bootstrap</p>
         </div>
-        <div>
+        <div className={Style.experience__skills__element}>
           <p className={Style.experience__skills__title}>backend</p>
           <div className={Style.experience__skills__line}></div>
           <p className={Style.experience__skills__text}>PHP</p>
           <p className={Style.experience__skills__subtitle}>FW/other</p>
-          <p className={Style.experience__skills__text}>Laravel, CakePHP, Symfony, MySQL, Redis Docker, Vagrant, Apache</p>
+          <p className={Style.experience__skills__text}>Laravel, CakePHP, Symfony, MySQL, Redis,<br/>Docker, Vagrant, Apache</p>
         </div>
       </div>
     </section>

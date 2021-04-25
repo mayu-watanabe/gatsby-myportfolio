@@ -1,8 +1,8 @@
 /* media */
 $breakpoints: (
-  "sp": "screen and (max-width: 560px)",
-  "tab": "screen and (min-width: 560px)",
-  "pc": "screen and (min-width: 960px)",
+  "sp": "screen and (max-width: 767px)",
+  "tab": "screen and (max-width: 1020px) and (min-width: 768px)",
+  "pc": "screen and (min-width: 1020px)",
 );
 // ex. @include media(tab){}
 @mixin media($breakpoint) {
