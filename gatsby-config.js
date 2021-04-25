@@ -3,6 +3,7 @@ module.exports = {
     title: `urania.`,
     description: `welcome`,
     author: `@mayu-watanabe`,
+    social: { github: "https://github.com/mayu-watanabe", wantedly: "https://www.wantedly.com/id/mwatanabe"}
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

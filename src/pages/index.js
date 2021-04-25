@@ -1,9 +1,9 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import SocialLink from "../components/socialLink"
 import * as Style from "../styles/style.module.scss"
 
 const IndexPage = () => (
@@ -27,8 +27,7 @@ const IndexPage = () => (
           <p>めまぐるしいテクノロジーの発展の中で、<br/>本当に必要としている人のもとへ適切なサービスは届いているのか。<br/>不特定多数の誰かではなく、目の前の誰かに必要とされるものを、<br/>共に作り、共に成長していきたいと思う。</p>
         </div>
         <div className={Style.about__link}>
-          <span>github</span>
-          <span>wantedly</span>
+          <SocialLink />
         </div>
       </div>
     </section>
