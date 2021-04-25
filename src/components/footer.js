@@ -1,9 +1,10 @@
 import * as React from "react"
 import PropTypes from "prop-types"
+import * as Style from "../styles/components/footer.module.scss"
 
 const Footer = ({ copyright }) => (
-  <footer>
-    <div>
+  <footer className={Style.footer}>
+    <div className={Style.footer__text}>
       <p>{ copyright }</p>
     </div>
   </footer>

@@ -1,11 +1,231 @@
-@import "./_variables.scss";
-@import "./_palette.scss";
+@import "./_variables.module.scss";
+@import "./_palette.module.scss";
 
-body {
-  @include font(body);
-  font-size: 16px;
+%sectionTitle {
+  @include font(6rem, 5.7rem, 0.63rem);
+}
+%normalText {
+  @include font(1.5rem, 3.6rem, 0.27rem);
+}
+%background {
+  @include z-index(background);
+  height: 100vh;
+  background-size: cover;
 }
 
-.top {
+html,
+body {
   position: relative;
+  font-size: 10px;
+  color: $font-primary;
+
+  a {
+    color: $font-primary;
+  }
+
+  section {
+    position: relative;
+    height: 100vh;
+
+    .index {
+      &__container {
+        @extend %background;
+        background-image: url("../images/background-index.jpg");
+      }
+      &__title {
+        @extend %sectionTitle;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        width: 80%;
+        height: 3.2rem;
+      }
+    }
+
+    .about {
+      &__container {
+        @extend %background;
+        background-image: url("../images/background-about.jpg");
+
+        p {
+          margin: 0 14%;
+        }
+      }
+      &__name {
+        position: absolute;
+        top: 20%;
+        right: 0;
+        left: 0;
+        &__name {
+          padding: 0 0 2.4rem 0;
+          @include font(3.2rem, 3.3rem, 1.2rem);
+        }
+        &__ocupation {
+          @include font(2.7rem, 3.3rem, 1rem);
+        }
+      }
+      &__text {
+        @extend %normalText;
+        position: absolute;
+        top: 53%;
+        right: 0;
+        left: 0;
+        &__title {
+          @include font(2.5rem, 2.8rem, 0.5rem);
+          padding: 0 0 2.7rem 0;
+        }
+      }
+      &__link {
+        position: absolute;
+        top: 86%;
+        right: 14%;
+      }
+    }
+
+    .service {
+      &__container {
+        @include z-index(background);
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 134vh;
+        width: 86%;
+        background-image: url("../images/background-service.jpg");
+        background-size: auto 134vh;
+        background-repeat: no-repeat;
+        background-position: 100% 0;
+      }
+      &__title {
+        @include z-index(default);
+        @extend %sectionTitle;
+        position: absolute;
+        top: 14%;
+        margin: 0 14%;
+      }
+      &__element {
+        @include font(1.4rem, 3.3rem, 0.23rem);
+        &__title {
+          &__design {
+            position: absolute;
+            top: 29%;
+            left: 34%;
+            @include font(12rem, 7.5rem, 0.83rem);
+            opacity: 0.2;
+          }
+          &__backend {
+            position: absolute;
+            top: 89%;
+            left: 14%;
+            @include font(12rem, 7.5rem, 0.83rem);
+            opacity: 0.2;
+          }
+        }
+        &__text {
+          &__design {
+            position: absolute;
+            top: 42%;
+            left: 14%;
+            width: 48rem;
+            text-align: justify;
+          }
+          &__backend {
+            position: absolute;
+            top: 71%;
+            left: 30%;
+            width: 48rem;
+            text-align: justify;
+          }
+        }
+      }
+    }
+
+    .experience {
+      &__title {
+        @extend %sectionTitle;
+        position: absolute;
+        top: 18%;
+        right: 14%;
+      }
+      &__career {
+        position: absolute;
+        top: 32%;
+        left: 14%;
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        &__year {
+          @include font(1.9rem, 2.5rem, 0.3rem);
+          padding: 0 1% 0 0;
+          li:last-child {
+            padding-top: 10%;
+          }
+        }
+        &__line {
+          border-left: 0.05rem solid $font-light;
+          padding: 0 0 0 2%;
+        }
+        &__content {
+          @include font(1.9rem, 2.5rem, 0.3rem);
+        }
+      }
+      &__skills {
+        position: absolute;
+        top: 37%;
+        right: 14%;
+        text-align: right;
+        &__title {
+          @include font(4.1rem, 3.6rem, 0.63rem);
+          margin-bottom: 2.5rem;
+          margin-top: 12%;
+        }
+        &__line {
+          border-bottom: 0.05rem solid $font-light;
+          margin: 3% 0 3% 24%;
+        }
+        &__subtitle {
+          @include font(1.6rem, 2rem, 0.2rem, 600);
+          margin-top: 5%;
+        }
+        &__text {
+          @include font(1.8rem, 2.8rem, 0.2rem);
+        }
+      }
+    }
+
+    .projects {
+      &__container {
+        @extend %background;
+        background-color: $background-light;
+      }
+      &__title {
+        @extend %sectionTitle;
+        text-align: center;
+        padding-top: 7%;
+      }
+    }
+
+    .contact {
+      &__container {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        margin: 0 14%;
+      }
+      &__title {
+        @extend %sectionTitle;
+      }
+      &__mail {
+        @include font(2.1rem, 3rem, 0.2rem);
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  section.experience {
+    height: 140vh;
+  }
 }

@@ -1,0 +1,40 @@
+/* media */
+$breakpoints: (
+  "sp": "screen and (max-width: 560px)",
+  "tab": "screen and (min-width: 560px)",
+  "pc": "screen and (min-width: 960px)",
+);
+// ex. @include media(tab){}
+@mixin media($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+/* layers */
+$layers: (
+  "background": -10,
+  "default": 1,
+  "header": 10,
+  "modal": 100,
+);
+@mixin z-index($key) {
+  z-index: map-get($layers, $key);
+}
+
+/* font */
+// @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Serif+JP:wght@300&display=swap"); // googlefont path
+// $type: (
+//   "title": "normal normal normal 50px/57px Baskerville",
+//   "subtitle": "Libre Baskerville",
+//   "body": "Noto Serif JP",
+// );
+@mixin font($size, $height, $letter-space, $weight: normal) {
+  font-style: normal;
+  font-variant: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  font-family: Baskerville, serif;
+  letter-spacing: $letter-space;
+}

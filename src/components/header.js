@@ -1,10 +1,12 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import * as Style from "../styles/components/header.module.scss"
 
 const Header = ({ siteTitle }) => (
-  <header>
-    <div>
+  <header className={Style.header}>
+    <div className={Style.header__container}>
+      <div className={Style.header__siteName}>
         <Link
           to="/"
           style={{
@@ -13,6 +15,7 @@ const Header = ({ siteTitle }) => (
         >
           {siteTitle}
         </Link>
+      </div>
     </div>
   </header>
 )
