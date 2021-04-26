@@ -8,13 +8,18 @@ header {
       left: 0;
       right: 0;
       top: 0;
-      margin: 2.4rem auto;
+      margin: 2%;
       @include z-index(header);
     }
     &__siteName {
-      margin-left: 6rem;
+      margin: 0 1%;
       text-align: left;
       @include font(3rem, 3rem, 0.32rem);
+
+      @include media(sp) {
+        margin: 4% 5%;
+        @include font(6.2vw, 6vw, 0.9vw);
+      }
     }
   }
 }

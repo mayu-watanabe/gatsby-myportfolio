@@ -3,9 +3,18 @@
 
 %sectionTitle {
   @include font(6rem, 5.7rem, 0.63rem);
+  @include media(sp) {
+    @include font(4rem, 4rem, 0.63rem);
+  }
 }
 %normalText {
   @include font(1.5rem, 3.6rem, 0.27rem);
+  @include media(sp) {
+    @include font(1.4rem, 3rem, 0.1rem);
+    br {
+      display: none;
+    }
+  }
 }
 %background {
   @include z-index(background);
@@ -19,16 +28,23 @@ body {
   font-size: 10px;
   color: $font-primary;
 
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
   a {
     color: $font-primary;
   }
 
   section {
     position: relative;
-    height: 100vh;
 
     .index {
       &__container {
+        height: 100vh;
         @extend %background;
         background-image: url("../images/background-index.jpg");
       }
@@ -47,11 +63,19 @@ body {
 
     .about {
       &__container {
+        height: 100vh;
         @extend %background;
         background-image: url("../images/background-about.jpg");
 
         p {
           margin: 0 14%;
+        }
+        @include media(sp) {
+          height: auto;
+          background-size: cover;
+          background-position: 50% 0;
+          box-sizing: border-box;
+          display: inline-block;
         }
       }
       &__name {
@@ -59,12 +83,23 @@ body {
         top: 20%;
         right: 0;
         left: 0;
+        @include media(sp) {
+          position: static;
+          margin-top: 25%;
+        }
         &__name {
           padding: 0 0 2.4rem 0;
           @include font(3.2rem, 3.3rem, 1.2rem);
+          @include media(sp) {
+            @include font(7vw, 10vw, 4vw);
+          }
         }
         &__ocupation {
-          @include font(2.7rem, 3.3rem, 1rem);
+          @include font(2.7rem, 3.6rem, 1rem);
+          @include media(sp) {
+            @include font(5.4vw, 4vw, 2.2vw);
+            color: $font-light;
+          }
         }
       }
       &__text {
@@ -73,15 +108,28 @@ body {
         top: 53%;
         right: 0;
         left: 0;
+        @include media(sp) {
+          position: static;
+          margin-top: 18%;
+        }
         &__title {
           @include font(2.5rem, 2.8rem, 0.5rem);
           padding: 0 0 2.7rem 0;
+          @include media(sp) {
+            @include font(5.7vw, 10vw, 2vw);
+            padding: 5% 0;
+          }
         }
       }
       &__link {
         position: absolute;
         top: 86%;
         right: 14%;
+        @include media(sp) {
+          position: static;
+          text-align: center;
+          margin: 20% 0 20% 0;
+        }
       }
     }
 
@@ -101,13 +149,31 @@ body {
         @include media(tab) {
           width: 100%;
         }
+        @include media(sp) {
+          display: none;
+        }
+        &__mobile {
+          @include media(sp) {
+            @include z-index(default);
+            height: auto;
+            width: 100%;
+            background-image: url("../images/background-service.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 100% 0;
+            padding-bottom: 20%;
+          }
+        }
       }
       &__title {
-        @include z-index(default);
         @extend %sectionTitle;
         position: absolute;
         top: 14%;
         margin: 0 14%;
+        @include media(sp) {
+          position: static;
+          padding: 20% 0 12% 0;
+        }
       }
       &__element {
         @include font(1.4rem, 3.3rem, 0.23rem);
@@ -118,6 +184,14 @@ body {
             left: 34%;
             @include font(12rem, 7.5rem, 0.83rem);
             opacity: 0.2;
+
+            @include media(sp) {
+              position: static;
+              padding: 8% 0 4% 0;
+              @include font(9vw, 10vw, 1.5vw);
+              text-align: center;
+              opacity: 1;
+            }
           }
           &__backend {
             position: absolute;
@@ -125,6 +199,14 @@ body {
             left: 14%;
             @include font(12rem, 7.5rem, 0.83rem);
             opacity: 0.2;
+
+            @include media(sp) {
+              position: static;
+              padding: 8% 0 4% 0;
+              @include font(9vw, 10vw, 1.5vw);
+              text-align: center;
+              opacity: 1;
+            }
           }
         }
         &__text {
@@ -134,6 +216,12 @@ body {
             left: 14%;
             width: 48rem;
             text-align: justify;
+
+            @include media(sp) {
+              position: static;
+              padding: 0 15% 2% 15%;
+              width: 100%;
+            }
           }
           &__backend {
             position: absolute;
@@ -144,12 +232,22 @@ body {
             @include media(tab) {
               right: 14%;
             }
+            @include media(sp) {
+              position: static;
+              padding: 0 15% 2% 15%;
+              width: 100%;
+            }
           }
         }
       }
     }
 
     .experience {
+      &__container {
+        @include media(sp) {
+          margin: 0 14%;
+        }
+      }
       &__title {
         @extend %sectionTitle;
         position: absolute;
@@ -157,6 +255,14 @@ body {
         right: 14%;
         @include media(tab) {
           top: 22%;
+        }
+        @include media(sp) {
+          display: none;
+        }
+        &__mobile {
+          @include font(11vw, 10vw, 1.8vw);
+          padding: 30% 0 12% 0;
+          opacity: 0.5;
         }
       }
       &__career {
@@ -169,6 +275,9 @@ body {
         list-style: none;
         @include media(tab) {
           top: 35%;
+        }
+        @include media(sp) {
+          display: none;
         }
         &__year {
           @include font(1.9rem, 2.5rem, 0.3rem);
@@ -184,6 +293,30 @@ body {
         &__content {
           @include font(1.9rem, 2.5rem, 0.3rem);
         }
+
+        &__mobile {
+          display: none;
+          padding-bottom: 20%;
+          @include media(sp) {
+            display: block;
+            list-style: none;
+            span {
+              display: block;
+            }
+            li {
+              margin: 10% 0;
+            }
+            &__year {
+              @include font(1.6rem, 2rem, 0.2rem);
+            }
+            &__content {
+              @include font(1.8rem, 2rem, 0.2rem);
+              margin: 5% 0 0 0%;
+              padding-left: 5%;
+              border-left: 0.05rem solid $font-light;
+            }
+          }
+        }
       }
       &__skills {
         position: absolute;
@@ -193,30 +326,52 @@ body {
         @include media(tab) {
           top: 42%;
         }
+        @include media(sp) {
+          display: none;
+        }
         &__element {
-          margin: 15% 0;
+          margin: 18% 0;
+          @include media(sp) {
+            margin: 18% 0 0 0;
+          }
         }
         &__title {
           @include font(4.1rem, 3.6rem, 0.63rem);
           margin-bottom: 2.5rem;
           margin-top: 12%;
+          @include media(sp) {
+            @include font(9.5vw, 10vw, 1.8vw);
+            margin: 5% 0;
+          }
         }
         &__line {
           border-bottom: 0.05rem solid $font-light;
           margin: 3% 0 3% 24%;
+          @include media(sp) {
+            margin: 5% 10% 10% 10%;
+          }
         }
         &__subtitle {
           @include font(1.6rem, 2rem, 0.2rem, 600);
-          margin-top: 5%;
+          margin-top: 10%;
+          @include media(sp) {
+            margin-top: 15%;
+          }
         }
         &__text {
           @include font(1.8rem, 2.8rem, 0.2rem);
+        }
+
+        &__mobile {
+          display: block;
+          text-align: center;
         }
       }
     }
 
     .projects {
       &__container {
+        height: 100vh;
         @extend %background;
         background-color: $background-light;
       }
@@ -227,6 +382,9 @@ body {
         @include media(tab) {
           padding-top: 17%;
         }
+        @include media(sp) {
+          padding-top: 20%;
+        }
       }
     }
 
@@ -234,8 +392,10 @@ body {
       &__container {
         height: 100vh;
         display: flex;
+        justify-content: left;
         align-items: center;
         margin: 0 14%;
+        word-break: break-all;
       }
       &__title {
         @extend %sectionTitle;
@@ -243,14 +403,26 @@ body {
       &__mail {
         @include font(2.1rem, 3rem, 0.2rem);
         margin-top: 2rem;
+        @include media(sp) {
+          @include font(1.6rem, 2.8rem, 0.2rem);
+        }
       }
     }
   }
 
+  section.service {
+    height: 100vh;
+    @include media(sp) {
+      height: auto;
+    }
+  }
   section.experience {
     height: 140vh;
     @include media(tab) {
       height: 120vh;
+    }
+    @include media(sp) {
+      height: auto;
     }
   }
 }

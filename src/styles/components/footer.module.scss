@@ -13,6 +13,11 @@ footer {
       margin-bottom: 3rem;
       text-align: center;
       @include font(1.5rem, 1.7rem, 0.053rem);
+
+      @include media(sp) {
+        margin-bottom: 2%;
+        @include font(4vw, 1vw, 0.2vw);
+      }
     }
   }
 }

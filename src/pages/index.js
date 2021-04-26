@@ -35,8 +35,9 @@ const IndexPage = () => (
     <section className={Style.service}>
       <div className={Style.service__container}>
       </div>
-      <div className={Style.service__title}>
-          service.
+      <div className={Style.service__container__mobile}>
+        <div className={Style.service__title}>
+            service.
         </div>
         <div className={Style.service__element}>
           <p className={Style.service__element__title__design}>design</p>
@@ -46,39 +47,82 @@ const IndexPage = () => (
           <p className={Style.service__element__title__backend}>backend</p>
           <p className={Style.service__element__text__backend}>PHPをメインに大規模なECサイトの開発に携わり、決済や物流に関わる機能開発、DB設計、API連携などの開発を行ってきました。これまでの経験を生かし、今後はさらに技術の幅を広げていきたいと思っております。</p>
         </div>
+      </div>
     </section>
 
     <section className={Style.experience}>
-      <div className={Style.experience__title}>
-        skill & experience.
-      </div>
-      <div className={Style.experience__career}>
-        <div className={Style.experience__career__year}>
-          <li>2019.3</li>
-          <li>2019.4</li>
-          <li>current</li>
+      <div className={Style.experience__container}>
+        <div className={Style.experience__title}>
+          skill & experience.
         </div>
-        <span className={Style.experience__career__line}></span>
-        <div className={Style.experience__career__content}>
-          <li>Bachelor of Arts in Economics</li>
-          <li>started working as Web Engineer</li>
+        <div className={Style.experience__career}>
+          <div className={Style.experience__career__year}>
+            <li>2019.3</li>
+            <li>2019.4</li>
+            <li>current</li>
+          </div>
+          <span className={Style.experience__career__line}></span>
+          <div className={Style.experience__career__content}>
+            <li>Bachelor of Arts in Economics</li>
+            <li>started working as Web Engineer</li>
+          </div>
         </div>
-      </div>
-      <div className={Style.experience__skills}>
-        <div className={Style.experience__skills__element}>
-          <p className={Style.experience__skills__title}>frontend</p>
-          <div className={Style.experience__skills__line}></div>
-          <p className={Style.experience__skills__text}>HTML, CSS/SCSS, Javascript</p>
-          <p className={Style.experience__skills__subtitle}>FW/other</p>
-          <p className={Style.experience__skills__text}>Vue.js, Nuxt.js, knockout.js, jQuery, bootstrap</p>
+        <div className={Style.experience__skills}>
+          <div className={Style.experience__skills__element}>
+            <p className={Style.experience__skills__title}>frontend</p>
+            <div className={Style.experience__skills__line}></div>
+            <p className={Style.experience__skills__text}>HTML, CSS/SCSS, Javascript</p>
+            <p className={Style.experience__skills__subtitle}>FW/others</p>
+            <p className={Style.experience__skills__text}>Vue.js, Nuxt.js, knockout.js, jQuery, bootstrap</p>
+          </div>
+          <div className={Style.experience__skills__element}>
+            <p className={Style.experience__skills__title}>backend</p>
+            <div className={Style.experience__skills__line}></div>
+            <p className={Style.experience__skills__text}>PHP</p>
+            <p className={Style.experience__skills__subtitle}>FW/others</p>
+            <p className={Style.experience__skills__text}>Laravel, CakePHP, Symfony, MySQL, Redis,<br/>Docker, Vagrant, Apache</p>
+          </div>
         </div>
-        <div className={Style.experience__skills__element}>
-          <p className={Style.experience__skills__title}>backend</p>
-          <div className={Style.experience__skills__line}></div>
-          <p className={Style.experience__skills__text}>PHP</p>
-          <p className={Style.experience__skills__subtitle}>FW/other</p>
-          <p className={Style.experience__skills__text}>Laravel, CakePHP, Symfony, MySQL, Redis,<br/>Docker, Vagrant, Apache</p>
+
+        {/* SP START */}
+        <div className={Style.experience__career__mobile}>
+          <div className={Style.experience__title__mobile}>
+            skill.
+          </div>
+          <div className={Style.experience__skills__mobile}>
+          <div className={Style.experience__skills__element}>
+            <p className={Style.experience__skills__title}>frontend</p>
+            <div className={Style.experience__skills__line}></div>
+            <p className={Style.experience__skills__text}>HTML, CSS/SCSS, Javascript</p>
+            <p className={Style.experience__skills__subtitle}>FW/others</p>
+            <p className={Style.experience__skills__text}>Vue.js, Nuxt.js, knockout.js, jQuery, bootstrap</p>
+          </div>
+          <div className={Style.experience__skills__element}>
+            <p className={Style.experience__skills__title}>backend</p>
+            <div className={Style.experience__skills__line}></div>
+            <p className={Style.experience__skills__text}>PHP</p>
+            <p className={Style.experience__skills__subtitle}>FW/others</p>
+            <p className={Style.experience__skills__text}>Laravel, CakePHP, Symfony, MySQL, Redis,<br/>Docker, Vagrant, Apache</p>
+          </div>
+          </div>
+          <div className={Style.experience__title__mobile}>
+            experience.
+          </div>
+          <div>
+            <li>
+              <span className={Style.experience__career__mobile__year}>2019.3</span>
+              <span className={Style.experience__career__mobile__content}>Bachelor of Arts in Economics</span>
+            </li>
+            <li>
+              <span className={Style.experience__career__mobile__year}>2019.4</span>
+              <span className={Style.experience__career__mobile__content}>started working as Web Engineer</span>
+            </li>
+            <li>
+              <span className={Style.experience__career__mobile__year}>current</span>
+            </li>
+          </div>
         </div>
+        {/* SP END */}
       </div>
     </section>
 
