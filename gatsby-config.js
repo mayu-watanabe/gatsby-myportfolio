@@ -49,6 +49,7 @@ module.exports = {
           enterEventName: 'sal:in', // Enter event name
           exitEventName: 'sal:out', // Exit event name
       }
-    }
+    },
+    `gatsby-plugin-anchor-links`
   ],
 }

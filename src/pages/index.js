@@ -10,13 +10,13 @@ const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
 
-    <section className={Style.index}>
+    <section className={Style.index} id="top">
       <div className={Style.index__container}>
         <div className={Style.index__title}>urania.</div>
       </div>
     </section>
     
-    <section className={Style.about}>
+    <section className={Style.about} id="about">
       <div className={Style.about__container}>
         <div
           className={Style.about__name}
@@ -53,7 +53,7 @@ const IndexPage = () => (
       </div>
     </section>
 
-    <section className={Style.service}>
+    <section className={Style.service} id="service">
       <div className={Style.service__container}>
       </div>
       <div className={Style.service__container__mobile}>
@@ -114,7 +114,7 @@ const IndexPage = () => (
       </div>
     </section>
 
-    <section className={Style.experience}>
+    <section className={Style.experience} id="skills">
       <div className={Style.experience__container}>
         <span
           className={Style.experience__title}
@@ -252,7 +252,7 @@ const IndexPage = () => (
       </div>
     </section>
 
-    <section className={Style.projects}>
+    <section className={Style.projects} id="projects">
       <div className={Style.projects__container}>
         <div
           className={Style.projects__title}
@@ -270,7 +270,7 @@ const IndexPage = () => (
       </div>
     </section>
     
-    <section className={Style.contact}>
+    <section className={Style.contact} id="contact">
       <div className={Style.contact__container}>
         <div
           className={Style.contact__title}
