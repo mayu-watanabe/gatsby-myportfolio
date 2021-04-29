@@ -183,14 +183,18 @@ body {
             top: 29%;
             left: 34%;
             @include font(12rem, 7.5rem, 0.83rem);
-            opacity: 0.2;
+            p {
+              opacity: 0.2;
+            }
 
             @include media(sp) {
               position: static;
               padding: 8% 0 4% 0;
               @include font(9vw, 10vw, 1.5vw);
               text-align: center;
-              opacity: 1;
+              p {
+                opacity: 1;
+              }
             }
           }
           &__backend {
@@ -198,14 +202,18 @@ body {
             top: 89%;
             left: 14%;
             @include font(12rem, 7.5rem, 0.83rem);
-            opacity: 0.2;
+            p {
+              opacity: 0.2;
+            }
 
             @include media(sp) {
               position: static;
               padding: 8% 0 4% 0;
               @include font(9vw, 10vw, 1.5vw);
               text-align: center;
-              opacity: 1;
+              p {
+                opacity: 1;
+              }
             }
           }
         }
